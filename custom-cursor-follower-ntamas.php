@@ -22,6 +22,7 @@ function ntamas_cursor_follower_enqueue_assets()
 }
 add_action('wp_enqueue_scripts', 'ntamas_cursor_follower_enqueue_assets');
 
+// Enqueue Font Awesome
 function ntamas_enqueue_font_awesome()
 {
     wp_enqueue_style('font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
@@ -78,8 +79,8 @@ function ntamas_cursor_register_settings()
     add_settings_section('ntamas_cursor_main_section', 'Cursor Settings', null, 'ntamas-cursor-settings');
 
     add_settings_field('ntamas_cursor_icon', 'Cursor Icon', 'ntamas_cursor_icon_field', 'ntamas-cursor-settings', 'ntamas_cursor_main_section');
-    add_settings_field('ntamas_cursor_size', 'Icon Size', 'ntamas_cursor_size_field', 'ntamas-cursor-settings', 'ntamas_cursor_main_section');
-    add_settings_field('ntamas_cursor_speed', 'Follow Speed', 'ntamas_cursor_speed_field', 'ntamas-cursor-settings', 'ntamas_cursor_main_section');
+    add_settings_field('ntamas_cursor_size', 'Icon Size (in px)', 'ntamas_cursor_size_field', 'ntamas-cursor-settings', 'ntamas_cursor_main_section');
+    add_settings_field('ntamas_cursor_speed', 'Follow Speed Delay', 'ntamas_cursor_speed_field', 'ntamas-cursor-settings', 'ntamas_cursor_main_section');
 }
 add_action('admin_init', 'ntamas_cursor_register_settings');
 
@@ -104,13 +105,6 @@ function ntamas_cursor_icon_field()
         echo "<option value='" . esc_attr($available_icon) . "' $selected>" . esc_html($available_icon) . "</option>";
     }
     echo "</select>";
-
-    // Display the icons
-    echo "<div style='margin-top: 10px;'>";
-    foreach ($icons as $available_icon) {
-        echo "<i class='" . esc_attr($available_icon) . "' style='margin-right: 10px;'></i>";
-    }
-    echo "</div>";
 }
 
 function ntamas_cursor_size_field()

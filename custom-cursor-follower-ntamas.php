@@ -9,8 +9,8 @@ Author: Ntamas
 // Enqueue the necessary CSS and JS files
 function ntamas_cursor_follower_enqueue_assets()
 {
-    wp_enqueue_style('ntamas-cursor-style', plugin_dir_url(__FILE__) . 'assets/css/styles.css?v0.0.14');
-    wp_enqueue_script('ntamas-cursor-script', plugin_dir_url(__FILE__) . 'js/script.js?v0.0.8', array('jquery'), null, true);
+    wp_enqueue_style('ntamas-cursor-style', plugin_dir_url(__FILE__) . 'public/css/styles.css');
+    wp_enqueue_script('ntamas-cursor-script', plugin_dir_url(__FILE__) . 'public/js/script.js', array('jquery'), null, true);
 
     // Localize script to pass PHP variables to JS
     wp_localize_script('ntamas-cursor-script', 'ntamasCursorSettings', array(
@@ -28,16 +28,24 @@ function ntamas_enqueue_font_awesome()
 }
 add_action('wp_enqueue_scripts', 'ntamas_enqueue_font_awesome');
 
+// Enqueue admin CSS and JS files
+function ntamas_cursor_follower_enqueue_admin_assets()
+{
+    wp_enqueue_style('ntamas-admin-style', plugin_dir_url(__FILE__) . 'admin/css/admin-styles.css');
+    wp_enqueue_script('ntamas-admin-script', plugin_dir_url(__FILE__) . 'admin/js/admin-script.js', array('jquery'), null, true);
+}
+add_action('admin_enqueue_scripts', 'ntamas_cursor_follower_enqueue_admin_assets');
+
 // Create admin menu
 function ntamas_cursor_follower_menu()
 {
     add_menu_page(
-        'Custom Cursor Follower',  // Page title
+        'Custom Cursor Follower by Ntamas',  // Page title
         'Cursor Follower',         // Menu title
         'manage_options',          // Capability
         'ntamas-cursor-settings',  // Menu slug
         'ntamas_cursor_settings_page',  // Callback function
-        'dashicons-admin-site',    // Icon
+        'dashicons-star-half',    // Icon
         100                        // Position
     );
 }

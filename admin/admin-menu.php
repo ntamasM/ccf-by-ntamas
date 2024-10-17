@@ -19,7 +19,7 @@ function ntamas_cursor_settings_page_with_image()
 {
 ?>
     <div class="ccf-header">
-        <img src="' . plugin_dir_url(__DIR__) . 'assets/media/Logo-CCF-by-Ntamas.png" alt="CCFLogo" style="vertical-align: middle; margin-right: 10px;">
+        <img src="' <?php echo plugin_dir_url(__DIR__) ?>'assets/media/Logo-CCF-by-Ntamas.png'" alt="CCFLogo" style="vertical-align: middle; margin-right: 10px;">
     </div>
     <div class="wrap">
         <form method="post" action="options.php">

@@ -6,8 +6,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const searchBox = selectBox.querySelector(".search-box");
   const searchInput = searchBox.querySelector("input");
 
-  // Set the default value of the custom select element to the value of the hidden select element ntamas_cursor_icon but put and the icon and the text
-  const defaultOption = document.querySelector("#ntamas_cursor_select").value;
+  // Set the default value of the custom select element to the value of the hidden select element ccfnt_icon but put and the icon and the text
+  const defaultOption = document.querySelector("#ccfnt_select").value;
   selected.innerHTML = `<i class="${defaultOption}"></i> ${defaultOption}`;
 
   // Toggle dropdown and search bar on click
@@ -26,8 +26,8 @@ document.addEventListener("DOMContentLoaded", function () {
       const icon = this.querySelector("i").outerHTML;
       const text = this.textContent.trim();
       selected.innerHTML = `${icon} ${text}`;
-      // after selecting, change the value of the hidden select element ntamas_cursor_icon to the selected option
-      document.querySelector("#ntamas_cursor_select").value = text;
+      // after selecting, change the value of the hidden select element ccfnt_icon to the selected option
+      document.querySelector("#ccfnt_select").value = text;
       optionsList.style.display = "none"; // Close dropdown after selecting
       searchBox.style.display = "none"; // Hide search box after selection
     });

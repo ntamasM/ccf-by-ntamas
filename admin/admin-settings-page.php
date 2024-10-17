@@ -1,14 +1,14 @@
 <?php
 // Settings page callback
-function ntamas_cursor_settings_page()
+function ccfnt_settings_page()
 {
 ?>
     <div class="wrap">
         <h1>Custom Cursor Follower Settings</h1>
         <form method="post" action="options.php">
             <?php
-            settings_fields('ntamas_cursor_settings_group');
-            do_settings_sections('ntamas-cursor-settings');
+            settings_fields('ccfnt_settings_group');
+            do_settings_sections('ccfnt-settings');
             submit_button();
             ?>
         </form>
@@ -18,9 +18,9 @@ function ntamas_cursor_settings_page()
 
 
 // Fields for settings page
-function ntamas_cursor_icon_field()
+function ccfnt_icon_field()
 {
-    $icon = get_option('ntamas_cursor_icon');
+    $icon = get_option('ccfnt_icon');
     $icons = [
         'fa fa-address-book',
         'fa fa-address-card',
@@ -325,7 +325,7 @@ function ntamas_cursor_icon_field()
 
     ];
 
-    echo "<div class='ntamas-cursor-select-container'>
+    echo "<div class='ccfnt-select-container'>
             <div class='custom-select'>
                 <div class='selected'>
                     <i class='fa fa-star'></i> 
@@ -340,7 +340,7 @@ function ntamas_cursor_icon_field()
         echo "<li><i class='" . esc_attr($available_icon) . "'></i>" . esc_html($available_icon) . "</li>";
     }
     echo "</ul></div></div>";
-    echo "<select id='ntamas_cursor_select' name='ntamas_cursor_icon'>";
+    echo "<select id='ccfnt_select' name='ccfnt_icon'>";
     foreach ($icons as $available_icon) {
         $selected = ($icon === $available_icon) ? 'selected' : '';
         echo "<option value='" . esc_attr($available_icon) . "' $selected>" . esc_html($available_icon) . "</option>";
@@ -348,26 +348,26 @@ function ntamas_cursor_icon_field()
     echo "</select>";
 }
 
-function ntamas_cursor_size_field()
+function ccfnt_size_field()
 {
-    $size = get_option('ntamas_cursor_size');
-    echo "<input type='number' name='ntamas_cursor_size' value='" . esc_attr($size) . "' min='1' max='100'/>";
+    $size = get_option('ccfnt_size');
+    echo "<input type='number' name='ccfnt_size' value='" . esc_attr($size) . "' min='1' max='100'/>";
 }
 
-function ntamas_cursor_position_x_field()
+function ccfnt_position_x_field()
 {
-    $position_x = get_option('ntamas_cursor_position_x');
-    echo "<input type='number' name='ntamas_cursor_position_x' value='" . esc_attr($position_x) . "' min='0' max='100'/>";
+    $position_x = get_option('ccfnt_position_x');
+    echo "<input type='number' name='ccfnt_position_x' value='" . esc_attr($position_x) . "' min='0' max='100'/>";
 }
 
-function ntamas_cursor_position_y_field()
+function ccfnt_position_y_field()
 {
-    $position_y = get_option('ntamas_cursor_position_y');
-    echo "<input type='number' name='ntamas_cursor_position_y' value='" . esc_attr($position_y) . "' min='0' max='100'/>";
+    $position_y = get_option('ccfnt_position_y');
+    echo "<input type='number' name='ccfnt_position_y' value='" . esc_attr($position_y) . "' min='0' max='100'/>";
 }
 
-function ntamas_cursor_speed_field()
+function ccfnt_speed_field()
 {
-    $speed = get_option('ntamas_cursor_speed');
-    echo "<input type='number' name='ntamas_cursor_speed' value='" . esc_attr($speed) . "' min='1' max='100'/>";
+    $speed = get_option('ccfnt_speed');
+    echo "<input type='number' name='ccfnt_speed' value='" . esc_attr($speed) . "' min='1' max='100'/>";
 }

@@ -1,24 +1,24 @@
 jQuery(document).ready(function ($) {
   // Add the cursor icon element to the body
   $("body").append(
-    '<div id="ntamas-cursor-icon" style="font-size: ' +
-      ntamasCursorSettings.size +
+    '<div id="ccfnt-icon" style="font-size: ' +
+      ccfntCursorSettings.size +
       "px; transform: translate(" +
-      ntamasCursorSettings.position_x +
+      ccfntCursorSettings.position_x +
       "px, " +
-      ntamasCursorSettings.position_y +
+      ccfntCursorSettings.position_y +
       'px);"><i class="' +
-      ntamasCursorSettings.icon +
+      ccfntCursorSettings.icon +
       '"></i></div>'
   );
 
   // Variables for cursor follow
-  var cursorIcon = $("#ntamas-cursor-icon");
+  var cursorIcon = $("#ccfnt-icon");
   var mouseX = 0,
     mouseY = 0;
   var posX = 0,
     posY = 0;
-  var delay = parseInt(ntamasCursorSettings.speed);
+  var delay = parseInt(ccfntCursorSettings.speed);
 
   // Track mouse position
   $(document).mousemove(function (e) {

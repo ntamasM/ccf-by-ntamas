@@ -1,21 +1,21 @@
 <?php
 // Create admin menu
-function ntamas_cursor_follower_menu()
+function ccfnt_follower_menu()
 {
     add_menu_page(
         'Custom Cursor Follower by Ntamas',  // Page title
         'Cursor Follower',         // Menu title
         'manage_options',          // Capability
-        'ntamas-cursor-settings',  // Menu slug
-        'ntamas_cursor_settings_page_with_image',  // Updated callback function
+        'ccfnt-settings',  // Menu slug
+        'ccfnt_settings_page_with_image',  // Updated callback function
         'dashicons-star-half',    // Icon
         100                        // Position
     );
 }
-add_action('admin_menu', 'ntamas_cursor_follower_menu');
+add_action('admin_menu', 'ccfnt_menu');
 
 // New callback function to include an image next to the page title
-function ntamas_cursor_settings_page_with_image()
+function ccfnt_settings_page_with_image()
 {
 ?>
     <div class="ccf-header">
@@ -36,8 +36,8 @@ function ntamas_cursor_settings_page_with_image()
     <div class="wrap">
         <form method="post" action="options.php">
             <?php
-            settings_fields('ntamas_cursor_follower_options_group');
-            do_settings_sections('ntamas-cursor-settings');
+            settings_fields('ccfnt_options_group');
+            do_settings_sections('ccfnt-settings');
             submit_button();
             ?>
         </form>

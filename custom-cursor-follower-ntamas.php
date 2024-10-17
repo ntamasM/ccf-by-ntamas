@@ -156,7 +156,7 @@ function ntamas_cursor_icon_field()
                 <ul class='options'>";
     foreach ($icons as $available_icon) {
         $selected = ($icon === $available_icon) ? 'selected' : '';
-        echo "<li><i class='" . esc_attr($available_icon) . "'>" . esc_html($available_icon) . "</li>";
+        echo "<li><i class='" . esc_attr($available_icon) . "'></i>" . esc_html($available_icon) . "</li>";
     }
     echo "</ul></div></div>";
 }

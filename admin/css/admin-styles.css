@@ -21,6 +21,14 @@
       margin-right: 10px;
     }
   }
+  .social {
+    display: flex;
+    justify-content: space-around;
+
+    div {
+      width: 30px;
+    }
+  }
 }
 
 .custom-select-container {

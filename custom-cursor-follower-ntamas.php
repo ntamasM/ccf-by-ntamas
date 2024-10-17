@@ -31,8 +31,10 @@ add_action('wp_enqueue_scripts', 'ntamas_cursor_follower_enqueue_assets');
 function ntamas_enqueue_font_awesome()
 {
     wp_enqueue_style('font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+    // add this on admin pages as well
 }
 add_action('wp_enqueue_scripts', 'ntamas_enqueue_font_awesome');
+add_action('admin_enqueue_scripts', 'ntamas_enqueue_font_awesome');
 
 // Enqueue admin CSS and JS files
 function ntamas_cursor_follower_enqueue_admin_assets()

@@ -19,4 +19,10 @@ function ntamas_cursor_settings_page_with_image()
 {
     echo '<h1><img src="' . plugin_dir_url(__DIR__) . 'assets/media/Logo-CCF-by-Ntamas.jpg" alt="CCFLogo" style="vertical-align: middle; margin-right: 10px;"> Custom Cursor Follower by Ntamas</h1>';
     // Your existing settings page content goes here
+    echo '<div class="wrap">
+        <h1>Custom Cursor Follower Settings</h1>
+        <form method="post" action="options.php">
+            ';
+    settings_fields('ntamas_cursor_settings_group');
+    echo wrapper_start();
 }

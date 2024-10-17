@@ -15,7 +15,8 @@ function ntamas_cursor_follower_enqueue_assets()
     // Localize script to pass PHP variables to JS
     wp_localize_script('ntamas-cursor-script', 'ntamasCursorSettings', array(
         'icon' => get_option('ntamas_cursor_icon'),
-        'color' => get_option('ntamas_cursor_color'),
+        'position_x' => get_option('ntamas_cursor_position_x'),
+        'position_y' => get_option('ntamas_cursor_position_y'),
         'size' => get_option('ntamas_cursor_size'),
         'speed' => get_option('ntamas_cursor_speed')
     ));
@@ -74,12 +75,16 @@ function ntamas_cursor_register_settings()
 {
     register_setting('ntamas_cursor_settings_group', 'ntamas_cursor_icon');
     register_setting('ntamas_cursor_settings_group', 'ntamas_cursor_size');
+    register_setting('ntamas_cursor_settings_group', 'ntamas_cursor_position_x');
+    register_setting('ntamas_cursor_settings_group', 'ntamas_cursor_position_y');
     register_setting('ntamas_cursor_settings_group', 'ntamas_cursor_speed');
 
     add_settings_section('ntamas_cursor_main_section', 'Cursor Settings', null, 'ntamas-cursor-settings');
 
     add_settings_field('ntamas_cursor_icon', 'Cursor Icon', 'ntamas_cursor_icon_field', 'ntamas-cursor-settings', 'ntamas_cursor_main_section');
     add_settings_field('ntamas_cursor_size', 'Icon Size (in px)', 'ntamas_cursor_size_field', 'ntamas-cursor-settings', 'ntamas_cursor_main_section');
+    add_settings_field('ntamas_cursor_position_x', 'Icon Position X (%)', 'ntamas_cursor_position_x_field', 'ntamas-cursor-settings', 'ntamas_cursor_main_section');
+    add_settings_field('ntamas_cursor_position_y', 'Icon Position Y (%)', 'ntamas_cursor_position_y_field', 'ntamas-cursor-settings', 'ntamas_cursor_main_section');
     add_settings_field('ntamas_cursor_speed', 'Follow Speed Delay', 'ntamas_cursor_speed_field', 'ntamas-cursor-settings', 'ntamas_cursor_main_section');
 }
 add_action('admin_init', 'ntamas_cursor_register_settings');
@@ -111,6 +116,18 @@ function ntamas_cursor_size_field()
 {
     $size = get_option('ntamas_cursor_size');
     echo "<input type='number' name='ntamas_cursor_size' value='" . esc_attr($size) . "' min='1' max='100'/>";
+}
+
+function ntamas_cursor_position_x_field()
+{
+    $position_x = get_option('ntamas_cursor_position_x');
+    echo "<input type='number' name='ntamas_cursor_position_x' value='" . esc_attr($position_x) . "' min='0' max='100'/>";
+}
+
+function ntamas_cursor_position_y_field()
+{
+    $position_y = get_option('ntamas_cursor_position_y');
+    echo "<input type='number' name='ntamas_cursor_position_y' value='" . esc_attr($position_y) . "' min='0' max='100'/>";
 }
 
 function ntamas_cursor_speed_field()

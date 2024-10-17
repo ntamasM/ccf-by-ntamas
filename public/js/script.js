@@ -1,6 +1,16 @@
 jQuery(document).ready(function ($) {
   // Add the cursor icon element to the body
-  $('body').append('<div id="ntamas-cursor-icon" style="font-size: ' + ntamasCursorSettings.size + 'px;"><i class="' + ntamasCursorSettings.icon + '"></i></div>');
+  $("body").append(
+    '<div id="ntamas-cursor-icon" style="font-size: ' +
+      ntamasCursorSettings.size +
+      "px; transform: translate(" +
+      ntamasCursorSettings.position_x +
+      "px, " +
+      ntamasCursorSettings.position_y +
+      'px);"><i class="' +
+      ntamasCursorSettings.icon +
+      '"></i></div>'
+  );
 
   // Variables for cursor follow
   var cursorIcon = $("#ntamas-cursor-icon");

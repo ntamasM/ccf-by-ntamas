@@ -4,6 +4,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const optionsList = selectBox.querySelector(".options");
   const options = selectBox.querySelectorAll(".options li");
 
+  selected.innerHTML = document.querySelector("#ntamas_cursor_select").value;
+
   // Toggle dropdown on click
   selected.addEventListener("click", function () {
     optionsList.style.display =

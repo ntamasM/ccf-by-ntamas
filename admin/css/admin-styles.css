@@ -28,13 +28,13 @@
 .search-box {
   min-height: 30px;
   border: 1px solid #ccc;
-  border-top: none;
+  border-bottom: none;
   display: none; /* Initially hidden */
 }
 
 .search-box input {
   width: 100%;
-  padding: 0 8px;
+  padding: 8px;
   border: none;
   outline: none;
 }

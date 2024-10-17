@@ -10,6 +10,16 @@ License: GPL2
 Text Domain: ccfnt
 */
 
+// Exit if accessed directly
+if (!defined('ABSPATH')) {
+    exit;
+}
+
+// import settings page and menu 
+require_once plugin_dir_path(__FILE__) . 'admin/admin-settings-page.php';
+require_once plugin_dir_path(__FILE__) . 'admin/admin-menu.php';
+require_once plugin_dir_path(__FILE__) . 'admin/register-settings.php';
+
 // Enqueue the necessary CSS and JS files
 function ntamas_cursor_follower_enqueue_assets()
 {
@@ -43,12 +53,3 @@ function ntamas_cursor_follower_enqueue_admin_assets()
     wp_enqueue_script('ntamas-admin-script', plugin_dir_url(__FILE__) . 'admin/js/admin-script.js', array('jquery'), null, true);
 }
 add_action('admin_enqueue_scripts', 'ntamas_cursor_follower_enqueue_admin_assets');
-
-// import settings page and menu 
-function namas_cursor_follower_enqueue_admin_assets()
-{
-    require_once plugin_dir_path(__FILE__) . 'admin/admin-settings-page.php';
-    require_once plugin_dir_path(__FILE__) . 'admin/admin-menu.php';
-    require_once plugin_dir_path(__FILE__) . 'admin/register-settings.php';
-}
-add_action('admin_enqueue_scripts', 'namas_cursor_follower_enqueue_admin_assets');

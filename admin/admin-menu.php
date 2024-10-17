@@ -17,6 +17,6 @@ add_action('admin_menu', 'ntamas_cursor_follower_menu');
 // New callback function to include an image next to the page title
 function ntamas_cursor_settings_page_with_image()
 {
-    echo '<h1><img src="../assets/media/Logo-CCF-by-Ntamas.jpg" alt="Image" style="vertical-align: middle; margin-right: 10px;"> Custom Cursor Follower by Ntamas</h1>';
+    echo '<h1><img src="' . plugin_dir_url(__DIR__) . 'assets/media/Logo-CCF-by-Ntamas.jpg" alt="CCFLogo" style="vertical-align: middle; margin-right: 10px;"> Custom Cursor Follower by Ntamas</h1>';
     // Your existing settings page content goes here
 }

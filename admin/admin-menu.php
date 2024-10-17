@@ -22,7 +22,7 @@ function ntamas_cursor_settings_page_with_image()
         <div class="logo">
 
             <a href="https://ntamadakis.gr"></a>
-            <img src="<?php echo plugin_dir_url(__DIR__) ?>assets/media/Logo-CCF-by-Ntamas.svg" alt="CCFLogoSVG" style="vertical-align: middle; margin-right: 10px;">
+            <img src="<?php echo plugin_dir_url(__DIR__) ?>assets/media/Icon-CCF-by-Ntamas.svg" alt="CCFLogoSVG" style="vertical-align: middle; margin-right: 10px;">
             </a>
         </div>
         <div class="title">

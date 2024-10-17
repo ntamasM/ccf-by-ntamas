@@ -19,7 +19,15 @@ function ntamas_cursor_settings_page_with_image()
 {
 ?>
     <div class="ccf-header">
-        <img src="<?php echo plugin_dir_url(__DIR__) ?>assets/media/Logo-CCF-by-Ntamas.png" alt="CCFLogo" style="vertical-align: middle; margin-right: 10px;">
+        <div class="logo">
+            <img src="<?php echo plugin_dir_url(__DIR__) ?>assets/media/Logo-CCF-by-Ntamas.png" alt="CCFLogo" style="vertical-align: middle; margin-right: 10px;">
+        </div>
+        <div class="title">
+            <h1>Custom Cursor Follower by Ntamas</h1>
+        </div>
+        <div class="social">
+
+        </div>
     </div>
     <div class="wrap">
         <form method="post" action="options.php">

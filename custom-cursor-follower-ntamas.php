@@ -43,7 +43,6 @@ function ntamas_cursor_follower_menu()
 {
     add_menu_page(
         'Custom Cursor Follower by Ntamas',  // Page title
-        'Cursor Follower',         // Menu title
         'manage_options',          // Capability
         'ntamas-cursor-settings',  // Menu slug
         'ntamas_cursor_settings_page',  // Callback function
@@ -83,8 +82,8 @@ function ntamas_cursor_register_settings()
 
     add_settings_field('ntamas_cursor_icon', 'Cursor Icon', 'ntamas_cursor_icon_field', 'ntamas-cursor-settings', 'ntamas_cursor_main_section');
     add_settings_field('ntamas_cursor_size', 'Icon Size (in px)', 'ntamas_cursor_size_field', 'ntamas-cursor-settings', 'ntamas_cursor_main_section');
-    add_settings_field('ntamas_cursor_position_x', 'Icon Position X (%)', 'ntamas_cursor_position_x_field', 'ntamas-cursor-settings', 'ntamas_cursor_main_section');
-    add_settings_field('ntamas_cursor_position_y', 'Icon Position Y (%)', 'ntamas_cursor_position_y_field', 'ntamas-cursor-settings', 'ntamas_cursor_main_section');
+    add_settings_field('ntamas_cursor_position_x', 'Icon Position X (in px)', 'ntamas_cursor_position_x_field', 'ntamas-cursor-settings', 'ntamas_cursor_main_section');
+    add_settings_field('ntamas_cursor_position_y', 'Icon Position Y (in px)', 'ntamas_cursor_position_y_field', 'ntamas-cursor-settings', 'ntamas_cursor_main_section');
     add_settings_field('ntamas_cursor_speed', 'Follow Speed Delay', 'ntamas_cursor_speed_field', 'ntamas-cursor-settings', 'ntamas_cursor_main_section');
 }
 add_action('admin_init', 'ntamas_cursor_register_settings');

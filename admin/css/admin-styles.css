@@ -24,6 +24,7 @@
   .social {
     display: flex;
     justify-content: space-around;
+    gap: 1rem;
     font-size: 30px;
   }
 }

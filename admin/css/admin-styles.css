@@ -24,12 +24,12 @@
 }
 
 .custom-select-container {
-  width: 200px;
+  width: 300px;
 }
 
 .custom-select {
   position: relative;
-  width: 200px;
+  width: 300px;
   cursor: pointer;
 }
 

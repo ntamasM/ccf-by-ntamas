@@ -26,7 +26,9 @@ function ntamas_cursor_settings_page_with_image()
             <h1>Custom Cursor Follower by Ntamas</h1>
         </div>
         <div class="social">
-
+            <div><a href="https://www.linkedin.com/in/manolis-ntamadakis/"><i class="fa-brands fa-linkedin"></i></a></div>
+            <div><a href="https://github.com/ntamasM"><i class="fa-brands fa-github"></i></a></div>
+            <div><a href="https://www.facebook.com/ntamas.manolis"><i class="fa-brands fa-facebook-f"></i></a></div>
         </div>
     </div>
     <div class="wrap">

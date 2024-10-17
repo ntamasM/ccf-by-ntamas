@@ -24,6 +24,22 @@
   margin-right: 8px;
 }
 
+/* Styling for the search box */
+.search-box {
+  padding: 0 8px;
+  min-height: 30px;
+  border: 1px solid #ccc;
+  border-top: none;
+  display: none; /* Initially hidden */
+}
+
+.search-box input {
+  width: 100%;
+  padding: 8px;
+  border: none;
+  outline: none;
+}
+
 .options {
   position: absolute;
   margin: 0;

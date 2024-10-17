@@ -51,3 +51,7 @@
 .options i {
   margin-right: 8px;
 }
+
+#ntamas_cursor_select {
+  display: none;
+}

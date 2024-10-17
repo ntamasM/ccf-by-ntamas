@@ -24,10 +24,7 @@
   .social {
     display: flex;
     justify-content: space-around;
-
-    div {
-      width: 30px;
-    }
+    font-size: 30px;
   }
 }
 

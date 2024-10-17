@@ -23,6 +23,5 @@ function ntamas_cursor_settings_page_with_image()
         <h1>Custom Cursor Follower Settings</h1>
         <form method="post" action="options.php">
             ';
-    settings_fields('ntamas_cursor_settings_group');
     echo wrapper_start();
 }

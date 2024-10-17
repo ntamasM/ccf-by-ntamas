@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const text = this.textContent.trim();
       selected.innerHTML = `${icon} ${text}`;
       // after selecting, change the value of the hidden select element ntamas_cursor_icon to the selected option
-      document.querySelector("#ntamas_cursor_icon").value = text;
+      document.querySelector("#ntamas_cursor_select").value = text;
       optionsList.style.display = "none"; // Close dropdown after selecting
     });
   });

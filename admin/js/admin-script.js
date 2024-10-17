@@ -4,7 +4,11 @@ document.addEventListener("DOMContentLoaded", function () {
   const optionsList = selectBox.querySelector(".options");
   const options = selectBox.querySelectorAll(".options li");
 
-  selected.innerHTML = document.querySelector("#ntamas_cursor_select").value;
+  // Set the default value of the custom select element to the value of the hidden select element ntamas_cursor_icon but put and the icon and the text
+  const defaultOption = document.querySelector("#ntamas_cursor_select").value;
+  const defaultOptionIcon = document.querySelector("#ntamas_cursor_select")
+    .dataset.icon;
+  selected.innerHTML = `<i class="${defaultOptionIcon}"></i> ${defaultOption}`;
 
   // Toggle dropdown on click
   selected.addEventListener("click", function () {

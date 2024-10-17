@@ -20,7 +20,10 @@ function ntamas_cursor_settings_page_with_image()
 ?>
     <div class="ccf-header">
         <div class="logo">
-            <a href="https://ntamadakis.gr"><img src="<?php echo plugin_dir_url(__DIR__) ?>assets/media/Logo-CCF-by-Ntamas.png" alt="CCFLogo" style="vertical-align: middle; margin-right: 10px;"></a>
+
+            <a href="https://ntamadakis.gr"></a>
+            <img src="<?php echo plugin_dir_url(__DIR__) ?>assets/media/Logo-CCF-by-Ntamas.svg" alt="CCFLogoSVG" style="vertical-align: middle; margin-right: 10px;">
+            </a>
         </div>
         <div class="title">
             <h1>Custom Cursor Follower by Ntamas</h1>

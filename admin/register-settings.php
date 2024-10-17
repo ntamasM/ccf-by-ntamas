@@ -20,3 +20,6 @@ function ccfnt_register_settings()
     add_settings_field('ccfnt_speed', 'Follow Speed Delay', 'ccfnt_speed_field', 'ccfnt-settings', 'ccfnt_main_section');
 }
 add_action('admin_init', 'ccfnt_register_settings');
+
+//Error: The ccfnt_options_group options page is not in the allowed options list.
+//Solution: Change the settings_fields() function to match the settings group name

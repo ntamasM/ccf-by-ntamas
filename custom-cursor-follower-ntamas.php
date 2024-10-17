@@ -147,12 +147,18 @@ function ntamas_cursor_icon_field()
         'fa fa-arrow-right'
     ];
 
-    echo "<select name='ntamas_cursor_icon'>";
+    echo "<div class='ntamas-cursor-select-container'>
+            <div class='custom-select'>
+                <div class='selected'>
+                    <i class='fa fa-star'></i> 
+                    Select an option
+                </div>
+                <ul class='options'>";
     foreach ($icons as $available_icon) {
         $selected = ($icon === $available_icon) ? 'selected' : '';
-        echo "<option value='" . esc_attr($available_icon) . "' $selected>" . esc_html($available_icon) . "</option>";
+        echo "<li><i class='" . esc_attr($available_icon) . "'>" . esc_html($available_icon) . "</li>";
     }
-    echo "</select>";
+    echo "</ul></div></div>";
 }
 
 function ntamas_cursor_size_field()

@@ -150,7 +150,7 @@ function ntamas_cursor_icon_field()
     echo "<select name='ntamas_cursor_icon'>";
     foreach ($icons as $available_icon) {
         $selected = ($icon === $available_icon) ? 'selected' : '';
-        echo "<option value='" . esc_attr($available_icon) . "' $selected><i class='" . esc_attr($available_icon) . "'></i>" . esc_html($available_icon) . "</option>";
+        echo "<option value='" . esc_attr($available_icon) . "' $selected>" . esc_html($available_icon) . "</option>";
     }
     echo "</select>";
 }

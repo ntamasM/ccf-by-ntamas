@@ -20,7 +20,7 @@ function ntamas_cursor_settings_page_with_image()
 ?>
     <div class="ccf-header">
         <div class="logo">
-            <a href="https://ntamadakis.gr">
+            <a href="https://github.com/ntamasM/CCF-by-Ntamas">
                 <img src="<?php echo plugin_dir_url(__DIR__) ?>assets/media/Icon-CCF-by-Ntamas.svg" alt="CCFLogoSVG" style="vertical-align: middle; margin-right: 10px;">
             </a>
         </div>
@@ -30,7 +30,7 @@ function ntamas_cursor_settings_page_with_image()
         <div class="social">
             <div><a href="https://www.linkedin.com/in/manolis-ntamadakis/"><i class="fa-brands fa-linkedin"></i></a></div>
             <div><a href="https://github.com/ntamasM"><i class="fa-brands fa-github"></i></a></div>
-            <div><a href="https://www.facebook.com/ntamas.manolis"><i class="fa-brands fa-facebook-f"></i></a></div>
+            <div><a href="https://ntamadakis.gr"><i class="fa fa-globe"></i></a></div>
         </div>
     </div>
     <div class="wrap">

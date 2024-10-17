@@ -53,4 +53,4 @@ function ccfnt_enqueue_admin_assets()
     wp_enqueue_style('ccfnt-admin-style', plugin_dir_url(__FILE__) . 'admin/css/admin-styles.css');
     wp_enqueue_script('ccfnt-admin-script', plugin_dir_url(__FILE__) . 'admin/js/admin-script.js', array('jquery'), null, true);
 }
-add_action('admin_enqueue_scripts', 'ccfnt_follower_enqueue_admin_assets');
+add_action('admin_enqueue_scripts', 'ccfnt_enqueue_admin_assets');

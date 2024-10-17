@@ -77,6 +77,9 @@ function ntamas_cursor_icon_field()
                     <i class='fa fa-star'></i> 
                     Select an option
                 </div>
+                <div class='search-box'>
+                    <input type=;text' placeholder='Search...'>
+                </div>
                 <ul class='options'>";
     foreach ($icons as $available_icon) {
         $selected = ($icon === $available_icon) ? 'selected' : '';

@@ -1,48 +1,4 @@
 <?php
-/*
-Plugin Name: Custom Cursor Follower by Ntamas
-Description: A plugin that adds a customizable icon that follows the cursor on the front end.
-Version: 1.0
-Author: Ntamas
-*/
-
-// Enqueue the necessary CSS and JS files
-function ntamas_cursor_follower_enqueue_assets()
-{
-    wp_enqueue_style('ntamas-cursor-style', plugin_dir_url(__FILE__) . 'assets/css/styles.css?v0.0.14');
-    wp_enqueue_script('ntamas-cursor-script', plugin_dir_url(__FILE__) . 'js/script.js?v0.0.8', array('jquery'), null, true);
-
-    // Localize script to pass PHP variables to JS
-    wp_localize_script('ntamas-cursor-script', 'ntamasCursorSettings', array(
-        'icon' => get_option('ntamas_cursor_icon'),
-        'color' => get_option('ntamas_cursor_color'),
-        'size' => get_option('ntamas_cursor_size'),
-        'speed' => get_option('ntamas_cursor_speed')
-    ));
-}
-add_action('wp_enqueue_scripts', 'ntamas_cursor_follower_enqueue_assets');
-
-function ntamas_enqueue_font_awesome()
-{
-    wp_enqueue_style('font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
-}
-add_action('wp_enqueue_scripts', 'ntamas_enqueue_font_awesome');
-
-// Create admin menu
-function ntamas_cursor_follower_menu()
-{
-    add_menu_page(
-        'Custom Cursor Follower',  // Page title
-        'Cursor Follower',         // Menu title
-        'manage_options',          // Capability
-        'ntamas-cursor-settings',  // Menu slug
-        'ntamas_cursor_settings_page',  // Callback function
-        'dashicons-admin-site',    // Icon
-        100                        // Position
-    );
-}
-add_action('admin_menu', 'ntamas_cursor_follower_menu');
-
 // Settings page callback
 function ntamas_cursor_settings_page()
 {
@@ -79,7 +35,30 @@ add_action('admin_init', 'ntamas_cursor_register_settings');
 function ntamas_cursor_icon_field()
 {
     $icon = get_option('ntamas_cursor_icon');
-    echo "<input type='text' name='ntamas_cursor_icon' value='" . esc_attr($icon) . "' placeholder='e.g., fa fa-star'/>";
+    $icons = [
+        'fa fa-star',
+        'fa fa-heart',
+        'fa fa-circle',
+        'fa fa-square',
+        'fa fa-arrow-up',
+        'fa fa-arrow-down',
+        'fa fa-arrow-left',
+        'fa fa-arrow-right'
+    ];
+
+    echo "<select name='ntamas_cursor_icon'>";
+    foreach ($icons as $available_icon) {
+        $selected = ($icon === $available_icon) ? 'selected' : '';
+        echo "<option value='" . esc_attr($available_icon) . "' $selected>" . esc_html($available_icon) . "</option>";
+    }
+    echo "</select>";
+
+    // Display the icons
+    echo "<div style='margin-top: 10px;'>";
+    foreach ($icons as $available_icon) {
+        echo "<i class='" . esc_attr($available_icon) . "' style='margin-right: 10px;'></i>";
+    }
+    echo "</div>";
 }
 
 function ntamas_cursor_size_field()

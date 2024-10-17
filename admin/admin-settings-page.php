@@ -1,21 +1,4 @@
 <?php
-// Settings page callback
-function ccfnt_settings_page()
-{
-?>
-    <div class="wrap">
-        <h1>Custom Cursor Follower Settings</h1>
-        <form method="post" action="options.php">
-            <?php
-            settings_fields('ccfnt_settings_group');
-            do_settings_sections('ccfnt-settings');
-            submit_button();
-            ?>
-        </form>
-    </div>
-<?php
-}
-
 
 // Fields for settings page
 function ccfnt_icon_field()

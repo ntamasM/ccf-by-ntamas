@@ -2,13 +2,13 @@ jQuery(document).ready(function ($) {
   // Add the cursor icon element to the body
   $("body").append(
     '<div id="ccfnt-icon" style="font-size: ' +
-      ccfntCursorSettings.size +
+      ccfntSettings.size +
       "px; transform: translate(" +
-      ccfntCursorSettings.position_x +
+      ccfntSettings.position_x +
       "px, " +
-      ccfntCursorSettings.position_y +
+      ccfntSettings.position_y +
       'px);"><i class="' +
-      ccfntCursorSettings.icon +
+      ccfntSettings.icon +
       '"></i></div>'
   );
 
@@ -18,7 +18,7 @@ jQuery(document).ready(function ($) {
     mouseY = 0;
   var posX = 0,
     posY = 0;
-  var delay = parseInt(ccfntCursorSettings.speed);
+  var delay = parseInt(ccfntSettings.speed);
 
   // Track mouse position
   $(document).mousemove(function (e) {

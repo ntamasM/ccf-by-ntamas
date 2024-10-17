@@ -28,7 +28,7 @@ function ccfnt_enqueue_assets()
     wp_enqueue_script('ccfnt-script', plugin_dir_url(__FILE__) . 'public/js/script.js', array('jquery'), null, true);
 
     // Localize script to pass PHP variables to JS
-    wp_localize_script('ccfnt-script', 'ccfntCursorSettings', array(
+    wp_localize_script('ccfnt-script', 'ccfntSettings', array(
         'icon' => get_option('ccfnt_icon'),
         'position_x' => get_option('ccfnt_position_x'),
         'position_y' => get_option('ccfnt_position_y'),

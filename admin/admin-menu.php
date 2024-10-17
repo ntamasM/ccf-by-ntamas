@@ -1,6 +1,6 @@
 <?php
 // Create admin menu
-function ccfnt_follower_menu()
+function ccfnt_menu()
 {
     add_menu_page(
         'Custom Cursor Follower by Ntamas',  // Page title

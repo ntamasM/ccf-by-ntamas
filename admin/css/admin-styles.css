@@ -45,6 +45,8 @@ body {
   border: 1px solid #ccc;
   list-style: none;
   display: none;
+  max-height: 200px; /* Set max height */
+  overflow-y: auto; /* Enable vertical scroll */
 }
 
 .options li {

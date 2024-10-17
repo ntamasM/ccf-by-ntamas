@@ -26,6 +26,7 @@
 
 .options {
   position: absolute;
+  margin: 0;
   top: 100%;
   left: 0;
   right: 0;

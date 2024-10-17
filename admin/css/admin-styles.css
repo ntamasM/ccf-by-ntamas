@@ -1,3 +1,26 @@
+.ccf-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #ccc;
+  .logo {
+    display: flex;
+    align-items: center;
+    img {
+      width: 40px;
+      height: 40px;
+      margin-right: 10px;
+    }
+    h1 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #333;
+    }
+  }
+}
+
 .custom-select-container {
   width: 200px;
 }

@@ -1,9 +1,13 @@
 <?php
 /*
 Plugin Name: Custom Cursor Follower by Ntamas
-Description: A plugin that adds a customizable icon that follows the cursor on the front end.
+Plugin URI: https://github.com/ntamasM/CCF-by-Ntamas
+Description: A Wordpress plugin to add an icon that will follow your cursor
 Version: 1.0
 Author: Ntamas
+Author URI: https://ntamadakis.gr
+License: GPL2
+Text Domain: ccfnt
 */
 
 // Enqueue the necessary CSS and JS files

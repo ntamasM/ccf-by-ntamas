@@ -6,9 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Set the default value of the custom select element to the value of the hidden select element ntamas_cursor_icon but put and the icon and the text
   const defaultOption = document.querySelector("#ntamas_cursor_select").value;
-  const defaultOptionIcon = document.querySelector("#ntamas_cursor_select")
-    .dataset.icon;
-  selected.innerHTML = `<i class="${defaultOptionIcon}"></i> ${defaultOption}`;
+  selected.innerHTML = `<i class="${defaultOption}"></i> ${defaultOption}`;
 
   // Toggle dropdown on click
   selected.addEventListener("click", function () {

@@ -26,12 +26,6 @@ jQuery(document).ready(function ($) {
     mouseY = e.pageY;
   });
 
-  //On scroll page find the position of the cursor and update the position of the cursor icon
-  $(window).scroll(function () {
-    var scroll = $(window).scrollTop();
-    mouseY = mouseY + scroll;
-  });
-
   // Follow the cursor with a delay
   function followCursor() {
     posX += (mouseX - posX) / delay;

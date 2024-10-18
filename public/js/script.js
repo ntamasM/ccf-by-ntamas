@@ -26,6 +26,12 @@ jQuery(document).ready(function ($) {
     mouseY = e.pageY;
   });
 
+  //Track mmouse position on scroll
+  $(document).scroll(function (e) {
+    mouseX = e.pageX;
+    mouseY = e.pageY;
+  });
+
   // Follow the cursor with a delay
   function followCursor() {
     posX += (mouseX - posX) / delay;

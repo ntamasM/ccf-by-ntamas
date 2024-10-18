@@ -30,7 +30,7 @@ jQuery(document).ready(function ($) {
   // On scroll page find the position of the cursor and update the position of the cursor icon
   $(window).scroll(function () {
     var scroll = $(window).scrollTop();
-    mouseY = scroll - prevScroll; // Calculate the difference in scroll position
+    mouseY = mouseY + (scroll - prevScroll); // Calculate the difference in scroll position
 
     prevScroll = scroll; // Update the previous scroll position
   });

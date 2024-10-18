@@ -29,6 +29,9 @@ jQuery(document).ready(function ($) {
   //On scroll page find the position of the cursor and update the position of the cursor icon
   $(window).scroll(function () {
     var scroll = $(window).scrollTop();
+    console.log(
+      "mouseY: " + mouseY + " + scroll: " + scroll + " =" + (mouseY + scroll)
+    );
     cursorIcon.css({
       top: mouseY + scroll + "px",
     });

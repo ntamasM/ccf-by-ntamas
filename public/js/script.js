@@ -26,10 +26,12 @@ jQuery(document).ready(function ($) {
     mouseY = e.pageY;
   });
 
-  //Track mmouse position on scroll
-  $(document).scroll(function (e) {
-    mouseX = e.pageX;
-    mouseY = e.pageY;
+  //On scroll page find the position of the cursor and update the position of the cursor icon
+  $(window).scroll(function () {
+    var scroll = $(window).scrollTop();
+    cursorIcon.css({
+      top: mouseY + scroll + "px",
+    });
   });
 
   // Follow the cursor with a delay

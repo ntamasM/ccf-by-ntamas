@@ -34,6 +34,7 @@ function ccfnt_settings_page_with_image()
         </div>
     </div>
     <div class="wrap">
+        <h2></h2>
         <form method="post" action="options.php">
             <?php
             settings_fields('ccfnt_settings_group');

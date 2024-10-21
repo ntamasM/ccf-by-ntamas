@@ -13,11 +13,11 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
+require_once plugin_dir_path(__FILE__) . 'updater-of-ccf.php';
 // import settings page and menu 
 require_once plugin_dir_path(__FILE__) . 'admin/admin-menu.php';
 require_once plugin_dir_path(__FILE__) . 'admin/admin-settings-page.php';
 require_once plugin_dir_path(__FILE__) . 'admin/register-settings.php';
-require_once plugin_dir_path(__FILE__) . 'updater-of-ccf.php';
 
 
 // Enqueue the necessary CSS and JS files

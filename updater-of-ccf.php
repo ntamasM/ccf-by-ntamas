@@ -10,7 +10,7 @@ class ntamasUpdater
     public function __construct()
     {
 
-        $this->plugin_slug   = dirname(plugin_basename(__DIR__));
+        $this->plugin_slug   = plugin_basename(__DIR__);
         $this->version       = '1.0.2';
         $this->cache_key     = 'ccf-by-ntamas_updater';
         $this->cache_allowed = false;

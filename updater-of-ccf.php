@@ -41,7 +41,7 @@ class ntamasUpdater
                 return false;
             }
 
-            set_transient($this->cache_key, $remote, DAY_IN_SECONDS);
+            set_transient($this->cache_key, $remote, MINUTE_IN_SECONDS);
         }
 
         $remote = json_decode(wp_remote_retrieve_body($remote));

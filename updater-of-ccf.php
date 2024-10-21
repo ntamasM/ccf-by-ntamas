@@ -58,7 +58,7 @@ class ntamasUpdater
         }
 
         // do nothing if it is not our plugin
-        if (empty($args->slug) || $this->plugin_slug !== $args->slug) {
+        if (plugin_basename(__DIR__) !== $args->slug) {
             return $response;
         }
 
@@ -113,7 +113,7 @@ class ntamasUpdater
         if ($remote && version_compare($this->version, $remote->version, '<') && version_compare($remote->requires, get_bloginfo('version'), '<=') && version_compare($remote->requires_php, PHP_VERSION, '<')) {
             $response              = new \stdClass();
             $response->slug        = $this->plugin_slug;
-            $response->plugin      = "{$this->plugin_slug}/{$this->plugin_slug}.php";
+            $response->plugin      = plugin_basename(__DIR__);
             $response->new_version = $remote->version;
             $response->tested      = $remote->tested;
             $response->package     = $remote->download_url;

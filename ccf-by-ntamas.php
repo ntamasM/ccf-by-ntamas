@@ -2,7 +2,7 @@
 /*
 Plugin Name: Custom Cursor Follower by Ntamas
 Description: A Wordpress plugin that will add an icon that will follow your cursor
-Version: 1.0.3
+Version: 1.0.4
 Author: Ntamas
 Author URI: https://ntamadakis.gr
 License: GPL2

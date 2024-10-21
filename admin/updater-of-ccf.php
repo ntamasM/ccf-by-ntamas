@@ -10,12 +10,6 @@ class ntamasUpdater
     public function __construct()
     {
 
-        if (defined('WP_FREIGHTER_DEV_MODE')) {
-            add_filter('https_ssl_verify', '__return_false');
-            add_filter('https_local_ssl_verify', '__return_false');
-            add_filter('http_request_host_is_external', '__return_true');
-        }
-
         $this->plugin_slug   = dirname(plugin_basename(__DIR__));
         $this->version       = '1.0.2';
         $this->cache_key     = 'ccf-by-ntamas_updater';

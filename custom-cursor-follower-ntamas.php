@@ -19,6 +19,7 @@ if (!defined('ABSPATH')) {
 require_once plugin_dir_path(__FILE__) . 'admin/admin-menu.php';
 require_once plugin_dir_path(__FILE__) . 'admin/admin-settings-page.php';
 require_once plugin_dir_path(__FILE__) . 'admin/register-settings.php';
+require_once plugin_dir_path(__FILE__) . 'admin/updater-of-ccf.php';
 
 
 // Enqueue the necessary CSS and JS files

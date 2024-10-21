@@ -1,5 +1,5 @@
 <?php
-class Updater
+class ntamasUpdater
 {
 
     public $plugin_slug;
@@ -139,3 +139,5 @@ class Updater
         }
     }
 }
+
+new ntamasUpdater();

@@ -41,7 +41,7 @@ class ntamasUpdater
                 return false;
             }
 
-            set_transient($this->cache_key, $remote, MINUTE_IN_SECONDS);
+            set_transient($this->cache_key, $remote, DAY_IN_SECONDS);
         }
 
         $remote = json_decode(wp_remote_retrieve_body($remote));
@@ -58,7 +58,7 @@ class ntamasUpdater
         }
 
         // do nothing if it is not our plugin
-        if (plugin_basename(__DIR__) !== $args->slug) {
+        if (empty($args->slug) || $this->plugin_slug !== $args->slug) {
             return $response;
         }
 
@@ -70,7 +70,6 @@ class ntamasUpdater
         }
 
         $response = new \stdClass();
-
         $response->name           = $remote->name;
         $response->slug           = $remote->slug;
         $response->version        = $remote->version;
@@ -113,7 +112,7 @@ class ntamasUpdater
         if ($remote && version_compare($this->version, $remote->version, '<') && version_compare($remote->requires, get_bloginfo('version'), '<=') && version_compare($remote->requires_php, PHP_VERSION, '<')) {
             $response              = new \stdClass();
             $response->slug        = $this->plugin_slug;
-            $response->plugin      = plugin_basename(__DIR__);
+            $response->plugin      = "{$this->plugin_slug}/{$this->plugin_slug}.php";
             $response->new_version = $remote->version;
             $response->tested      = $remote->tested;
             $response->package     = $remote->download_url;

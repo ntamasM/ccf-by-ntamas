@@ -1,6 +1,6 @@
 ﻿# CCF by Ntamas (Custom Cursor Follower by Ntamas)
 
-A Wordpress plugin to add an icon that will follow your cursor
+A Wordpress plugin that will add an icon that will follow your cursor
 
 ## Table of Contents
 

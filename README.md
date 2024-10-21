@@ -12,7 +12,7 @@ A Wordpress plugin to add an icon that will follow your cursor
 
 ## Installation
 
-1. <> Code > Download ZIP.
+1. Download the Latest release from <a href="https://github.com/ntamasM/CCF-by-Ntamas/releases/latest">here</a>
 2. Upload on wordpress on plugins
 3. Activate the plugin.
 

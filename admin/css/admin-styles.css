@@ -1,0 +1,113 @@
+#wpcontent {
+  padding: 0 !important;
+}
+
+.wrap {
+  padding-left: 20px;
+}
+
+.ccf-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #ccc;
+  .logo {
+    display: flex;
+    align-items: center;
+    img {
+      height: 50px;
+      margin-right: 10px;
+    }
+  }
+  .title {
+    a {
+      text-decoration: none;
+      color: #285d56;
+    }
+  }
+  .social {
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+    font-size: 30px;
+    a {
+      color: #285d56;
+    }
+  }
+}
+
+.custom-select-container {
+  width: 300px;
+}
+
+.custom-select {
+  position: relative;
+  width: 300px;
+  cursor: pointer;
+}
+
+.selected {
+  background-color: #fff;
+  padding: 0 8px;
+  min-height: 30px;
+  border: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 4px;
+  border: 1px solid #8c8f94;
+}
+
+.selected i {
+  margin-right: 8px;
+}
+
+/* Styling for the search box */
+.search-box {
+  min-height: 30px;
+  border: 1px solid #ccc;
+  border-bottom: none;
+  display: none; /* Initially hidden */
+}
+
+.search-box input {
+  width: -webkit-fill-available;
+  padding: 8px;
+  border: none;
+  outline: none;
+}
+
+.options {
+  position: absolute;
+  margin: 0;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  list-style: none;
+  display: none;
+  max-height: 200px; /* Set max height */
+  overflow-y: auto; /* Enable vertical scroll */
+}
+
+.options li {
+  padding: 0 8px;
+  min-height: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.options li:hover {
+  background-color: #eee;
+}
+
+.options i {
+  margin-right: 8px;
+}
+
+#ccfnt_select {
+  display: none;
+}

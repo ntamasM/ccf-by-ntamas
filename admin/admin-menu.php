@@ -3,10 +3,10 @@
 function ccfnt_menu()
 {
     add_menu_page(
-        'Custom Cursor Follower by Ntamas',  // Page title
-        'Cursor Follower',         // Menu title
+        'CCF by Ntamas (Custom Cursor Follower by Ntamas)',  // Page title
+        'CCF by ntamas',         // Menu title
         'manage_options',          // Capability
-        'ccfnt-settings',  // Menu slug
+        'ccf-by-ntamas',  // Menu slug
         'ccfnt_settings_page_with_image',  // Updated callback function
         'dashicons-star-half',    // Icon
         100                        // Position
@@ -20,8 +20,8 @@ function ccfnt_settings_page_with_image()
 ?>
     <div class="ccf-header">
         <div class="logo">
-            <a href="https://github.com/ntamasM/CCF-by-Ntamas">
-                <img src="<?php echo plugin_dir_url(__DIR__) ?>assets/media/Icon-CCF-by-Ntamas.svg" alt="CCFLogoSVG" style="vertical-align: middle; margin-right: 10px;">
+            <a href="https://github.com/ntamasM/ccf-by-ntamas">
+                <img src="<?php echo esc_url(plugin_dir_url(__DIR__)) ?>assets/media/Icon-CCF-by-Ntamas.svg" alt="CCFLogoSVG" style="vertical-align: middle; margin-right: 10px;">
             </a>
         </div>
         <div class="title">
@@ -38,7 +38,7 @@ function ccfnt_settings_page_with_image()
         <form method="post" action="options.php">
             <?php
             settings_fields('ccfnt_settings_group');
-            do_settings_sections('ccfnt-settings');
+            do_settings_sections('ccf-by-ntamas');
             submit_button();
             ?>
         </form>

@@ -326,7 +326,7 @@ function ccfnt_icon_field()
     echo "<select id='ccfnt_select' name='ccfnt_icon'>";
     foreach ($icons as $available_icon) {
         $selected = ($icon === $available_icon) ? 'selected' : '';
-        echo "<option value='" . esc_attr($available_icon) . "' $selected>" . esc_html($available_icon) . "</option>";
+        echo "<option value='" . esc_attr($available_icon) . "' " . esc_attr($selected) . ">" . esc_html($available_icon) . "</option>";
     }
     echo "</select>";
 }

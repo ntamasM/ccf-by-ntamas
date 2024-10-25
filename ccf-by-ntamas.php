@@ -5,7 +5,7 @@
 Plugin Name:       CCF by Ntamas (Custom Cursor Follower by Ntamas)
 Plugin URI:        https://github.com/ntamasM/ccf-by-ntamas
 Description:       A Wordpress plugin that will add an icon that will follow your cursor
-Version:           1.0.5
+Version:           1.0.6
 Author:            Ntamas
 Author URI:        https://ntamadakis.gr
 License:           GPLv2 (or later)

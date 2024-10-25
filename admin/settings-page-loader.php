@@ -1,19 +1,4 @@
 <?php
-// Create admin menu
-function ccfnt_menu()
-{
-    add_menu_page(
-        'CCF by Ntamas (Custom Cursor Follower by Ntamas)',  // Page title
-        'CCF by ntamas',         // Menu title
-        'manage_options',          // Capability
-        'ccf-by-ntamas',  // Menu slug
-        'ccfnt_settings_page_with_image',  // Updated callback function
-        'dashicons-star-half',    // Icon
-        100                        // Position
-    );
-}
-add_action('admin_menu', 'ccfnt_menu');
-
 // New callback function to include an image next to the page title
 function ccfnt_settings_page_with_image()
 {
@@ -25,7 +10,7 @@ function ccfnt_settings_page_with_image()
             </a>
         </div>
         <div class="title">
-            <h1><a href="https://github.com/ntamasM/CCF-by-Ntamas">Custom Cursor Follower by Ntamas</a></h1>
+            <h1><a href="https://github.com/ntamasM/ccf-by-ntamas">Custom Cursor Follower by Ntamas</a></h1>
         </div>
         <div class="social">
             <div><a href="https://www.linkedin.com/in/manolis-ntamadakis/"><i class="fa-brands fa-linkedin"></i></a></div>
@@ -42,6 +27,13 @@ function ccfnt_settings_page_with_image()
             submit_button();
             ?>
         </form>
+
+        <h3>After you save the settings you can see the live preview</h3>
+        <!-- Add a Preview and Cancel Preview button -->
+        <button id="ccfnt-preview-button" class="button button-primary">Preview</button>
+        <button id="ccfnt-cancel-preview-button" class="button button-secondary" style="display: none;">Cancel Preview</button>
+
+        <div id="ccfnt-preview-container"></div> <!-- This container will load the preview -->
     </div>
 <?php
 }

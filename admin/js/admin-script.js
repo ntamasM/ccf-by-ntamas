@@ -57,3 +57,60 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+jQuery(document).ready(function ($) {
+  let previewActive = false; // Track the preview state
+
+  $("#ccfnt-preview-button").on("click", function (e) {
+    e.preventDefault();
+
+    if (previewActive) {
+      console.log("Preview is already active.");
+      return; // Don't proceed if preview is already active
+    }
+
+    previewActive = true; // Set preview to active
+
+    // Inject the public CSS (only if not already added)
+    if (!$("#ccfnt-preview-style").length) {
+      $("head").append(
+        '<link rel="stylesheet" id="ccfnt-preview-style" href="' +
+          ccfntSettings.pluginUrl +
+          'public/css/styles.css" type="text/css" media="all">'
+      );
+    }
+
+    // Inject the public JS (only if not already added)
+    if (!$("#ccfnt-preview-script").length) {
+      $.getScript(ccfntSettings.pluginUrl + "public/js/script.js", function () {
+        console.log("Public JS loaded for preview.");
+      });
+    }
+
+    // Display the preview container
+    $("#ccfnt-preview-container").html(
+      "<p>Preview activated. Move your cursor to see the effect!</p>"
+    );
+
+    // Toggle button visibility
+    $("#ccfnt-preview-button").hide();
+    $("#ccfnt-cancel-preview-button").show();
+  });
+
+  // Handle Cancel Preview
+  $("#ccfnt-cancel-preview-button").on("click", function (e) {
+    e.preventDefault();
+
+    // Remove the injected preview assets
+    $("#ccfnt-preview-style, #ccfnt-preview-script").remove();
+
+    // Clear the preview container
+    $("#ccfnt-preview-container").empty();
+
+    previewActive = false; // Reset preview state
+
+    // Toggle button visibility
+    $("#ccfnt-preview-button").show();
+    $("#ccfnt-cancel-preview-button").hide();
+  });
+});

@@ -28,7 +28,7 @@ A WordPress plugin that adds a customizable icon that follows your cursor, enhan
 ## Features
 
 - Adds an icon that follows your cursor.
-- Choose icon, icon size, distance, and speed.
+- Selector for icon, icon size, distance from the cursor, and speed.
 
 ## Contributing
 
@@ -44,4 +44,43 @@ Tested up to: **WordPress 6.0** (or the latest version you have tested with).
 
 ## Changelog
 
-- **1.0.0** - Initial release.
+<h4>v1.0.6</h4> 
+<p>released on October 25, 2024</p>
+<p>Fixed:
+    <ul>
+        <li>Document boundaries problem</li>
+        <li>Update notification problem</li>
+    </ul>
+</p>
+<p>Feature added:
+    <ul>
+        <li>Dashboard preview</li>
+        <li>Plugin "settings" link on the plugins</li>
+    </ul>
+</p>
+
+<h4>v1.0.5</h4> 
+<p>released on October 24, 2024</p>
+<p>Fixed:
+    <ul>
+        <li>Update control</li>
+    </ul>
+</p>
+
+<h4>v1.0.4</h4>
+<p>released on October 21, 2024</p>
+<p>Feature:
+    <ul>
+        <li>Add update control</li>
+    </ul>
+</p>
+
+<h4>v1.0.3</h4>
+<p>released on October 18, 2024</p>
+<p>Feature:
+    <ul>
+        <li>Icon selector (only Font Awesome supported)</li>
+        <li>Selector for Speed</li>
+        <li>Selectors ( X and Y ) for the distance between cursor and the icon</li>
+    </ul>
+</p>

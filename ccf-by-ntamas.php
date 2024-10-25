@@ -22,10 +22,12 @@ if (! defined('WPINC')) {
 
 // import settings page and menu 
 if (is_admin()) {
-    require plugin_dir_path(__FILE__) . 'admin/admin-menu.php';
-    require plugin_dir_path(__FILE__) . 'admin/admin-settings-page.php';
-    require plugin_dir_path(__FILE__) . 'admin/register-settings.php';
+    require plugin_dir_path(__FILE__) . 'admin/menu-loader.php';
+    require plugin_dir_path(__FILE__) . 'admin/register-fielsd-and-settings.php';
+    require plugin_dir_path(__FILE__) . 'admin/fields-and-settings-loader.php';
+    require plugin_dir_path(__FILE__) . 'admin/settings-page-loader.php';
     require plugin_dir_path(__FILE__) . 'admin/updater-of-ccf.php';
+    require plugin_dir_path(__FILE__) . 'admin/plugin_actions_links.php';
 }
 
 
@@ -73,6 +75,16 @@ function ccfnt_enqueue_admin_assets($hook_suffix)
     if ($screen->id === 'toplevel_page_ccf-by-ntamas') {
         wp_enqueue_style('ccfnt-admin-style', plugin_dir_url(__FILE__) . 'admin/css/admin-styles.css', array(), filemtime(plugin_dir_path(__FILE__) . 'admin/css/admin-styles.css'));
         wp_enqueue_script('ccfnt-admin-script', plugin_dir_url(__FILE__) . 'admin/js/admin-script.js', array('jquery'), filemtime(plugin_dir_path(__FILE__) . 'admin/js/admin-script.js'), true);
+
+        // Localize script to pass the plugin URL
+        wp_localize_script('ccfnt-admin-script', 'ccfntSettings', array(
+            'pluginUrl' => plugin_dir_url(__FILE__),
+            'icon' => get_option('ccfnt_icon'),
+            'position_x' => get_option('ccfnt_position_x'),
+            'position_y' => get_option('ccfnt_position_y'),
+            'size' => get_option('ccfnt_size'),
+            'speed' => get_option('ccfnt_speed')
+        ));
 
         // Add defer attribute to the admin script
         add_filter('script_loader_tag', 'add_defer_attribute', 10, 2);
